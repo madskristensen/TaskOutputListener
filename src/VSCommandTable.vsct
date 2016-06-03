@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+  <Include href="KnownImageIds.vsct"/>
+
+  <Commands package="guidTaskOuputPackage">
+    <Groups>
+      <Group guid="TaskOutputCmdSet" id="MyMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="TaskOutputCmdSet" id="ClearErrorList" priority="0x0100" type="Button">
+        <Parent guid="TaskOutputCmdSet" id="MyMenuGroup" />
+        <Icon guid="ImageCatalogGuid" id="EventError" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <Strings>
+          <ButtonText>Clear Error List</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guidTaskOuputPackage" value="{eaf3e2fe-8065-4e8e-9d49-6088af69e5a1}" />
+
+    <GuidSymbol name="TaskOutputCmdSet" value="{5beb2bbb-e10c-4407-88a2-92bb0fb597c3}">
+      <IDSymbol name="MyMenuGroup" value="0x1020" />
+      <IDSymbol name="ClearErrorList" value="0x0100" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
